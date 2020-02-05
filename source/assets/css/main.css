@@ -1342,7 +1342,7 @@ input, select, textarea {
 			display: flex;
 			margin-bottom: 0;
 			list-style: none;
-			padding-right: 9px;
+			padding-right: 0;
 			border: solid 1px #ffffff;
 			border-radius: 4px;
 		}
