@@ -112,29 +112,48 @@
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 							</article>
+						
+
+						<!-- Thank You -->
+						<article id="thankyou">
+							<h2 class="major">Thank You!</h2>
+							<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+							
+						</article>
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" name=”contact_form” action=”contact-form-handler.php”>
+								<form method="post" action=”https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_n8Qq35BQrWkSbh7x8DHo61MXnqEEoghXlJxSiudNmrCtvQ/formResponse?pli=1”>
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="entry.2005620554" id="name" />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="text" name="entry.1045781291" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Phone Number</label>
+											<input type="text" name="entry.1166974658" id="phone" rows="4"/>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="entry.839337160" id="message" rows="4"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
+									
+										<script type="text/javascript">var submitted=false;</script>
+										<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
+										onload="if(submitted) {window.location='#thankyou';}"></iframe>
+
+										<form action="https://docs.google.com/forms/d/e/safdalfjaISv65R6J11H0o_7FadflUm/formResponse" 
+										method="post" target="hidden_iframe" onsubmit="submitted=true;">
 								</form>
 								<ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
