@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 	</head>
 	<body class="is-preload">
 
@@ -124,7 +125,10 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action=”https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_n8Qq35BQrWkSbh7x8DHo61MXnqEEoghXlJxSiudNmrCtvQ/formResponse?pli=1”>
+								<form role="form" id="contactForm" class="contact-form" data-toggle="validator">
+								<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+									
+
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -148,12 +152,7 @@
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 									
-										<script type="text/javascript">var submitted=false;</script>
-										<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
-										onload="if(submitted) {window.location='#thankyou';}"></iframe>
-
-										<form action="https://docs.google.com/forms/d/e/safdalfjaISv65R6J11H0o_7FadflUm/formResponse" 
-										method="post" target="hidden_iframe" onsubmit="submitted=true;">
+									
 								</form>
 								<ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -161,14 +160,6 @@
 									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
-
-								<script language="JavaScript">
-									var frmvalidator  = new Validator("contactform");
-									frmvalidator.addValidation("name","req","Please provide your name");
-									frmvalidator.addValidation("email","req","Please provide your email");
-									frmvalidator.addValidation("email","email",
-									  "Please enter a valid email address");
-								</script>
 
 							</article>
 
@@ -434,6 +425,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/gen_validatorv31.js"></script>
+			
 	</body>
 </html>
