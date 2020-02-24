@@ -134,31 +134,85 @@
 								<h2 class="major">Contact</h2>
 								<form role="form" id="contactForm" class="contact-form" data-toggle="validator">
 								<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+								<header>
+																	function submitToAPI(e) {
+									       e.preventDefault();
+									       var URL = "https://co7f6chdb7.execute-api.us-east-1.amazonaws.com/post";
 
+									            var Namere = /[A-Za-z]{1}[A-Za-z]/;
+									            if (!Namere.test($("#name-input").val())) {
+									                         alert ("Name can not less than 2 char");
+									                return;
+									            }
+									            var mobilere = /[0-9]{10}/;
+									            if (!mobilere.test($("#phone-input").val())) {
+									                alert ("Please enter valid mobile number");
+									                return;
+									            }
+									            if ($("#email-input").val()=="") {
+									                alert ("Please enter your email id");
+									                return;
+									            }
+
+									            var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+									            if (!reeamil.test($("#email-input").val())) {
+									                alert ("Please enter valid email address");
+									                return;
+									            }
+
+									       var name = $("#name-input").val();
+									       var phone = $("#phone-input").val();
+									       var email = $("#email-input").val();
+									       var desc = $("#description-input").val();
+									       var data = {
+									          name : name,
+									          phone : phone,
+									          email : email,
+									          desc : desc
+									        };
+
+									       $.ajax({
+									         type: "POST",
+									         url : "https://co7f6chdb7.execute-api.us-east-1.amazonaws.com/post",
+									         dataType: "json",
+									         crossDomain: "true",
+									         contentType: "application/json; charset=utf-8",
+									         data: JSON.stringify(data),
+
+
+									         success: function () {
+									           // clear form and show a success message
+									           alert("Successfull");
+									           document.getElementById("contact-form").reset();
+									       location.reload();
+									         },
+									         error: function () {
+									           // show an error message
+									           alert("UnSuccessfull");
+									         }});
+									     }
+								</header>
 
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="entry.2005620554" id="name" />
+											<input type="text" id="name-input" placeholder="Name..." class="form-control" />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="entry.1045781291" id="email" />
+											<input type="email" id="email-input" placeholder="Email..." class="form-control" />
 										</div>
 										<div class="field">
 											<label for="message">Phone Number</label>
-											<input type="text" name="entry.1166974658" id="phone" rows="4"/>
+											<input type="phone" id="phone-input" placeholder="Phone..." class="form-control" />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="entry.839337160" id="message" rows="4"></textarea>
+											<textarea id="description-input" rows="3" placeholder="Message…" class="form-control" ></textarea>
 										</div>
 									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
 
+									<button type="submit" onClick="submitToAPI(event)" class="primary">Submit</button>
 
 								</form>
 								<ul class="icons">
