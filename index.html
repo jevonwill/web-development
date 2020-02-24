@@ -133,8 +133,10 @@
 							<article id="contact">
 								<h2 class="major">Contact</h2>
 								<form role="form" id="contactForm" class="contact-form" data-toggle="validator">
+
+								<!-- Script -->
 								<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-								<head>
+								<script>
 																	function submitToAPI(e) {
 									       e.preventDefault();
 									       var URL = "https://co7f6chdb7.execute-api.us-east-1.amazonaws.com/post";
@@ -191,7 +193,7 @@
 									           alert("UnSuccessfull");
 									         }});
 									     }
-								</head>
+								</script>
 
 									<div class="fields">
 										<div class="field half">
@@ -212,7 +214,7 @@
 										</div>
 									</div>
 
-									<button type="submit" onClick="submitToAPI(event)" class="primary">Submit</button>
+									<button type="submit" onClick="submitToAPI(event)" class="button primary">Submit</button>
 
 								</form>
 								<ul class="icons">
