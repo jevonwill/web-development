@@ -165,7 +165,8 @@
 																<!-- Script -->
 																<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 																<script>
-																									function submitToAPI(e) {
+																document.getElementById('contact-form').addEventListener('submit', submitToAPI);
+																	function submitToAPI(e) {
 																	       e.preventDefault();
 																	       var URL = "https://co7f6chdb7.execute-api.us-east-1.amazonaws.com/post";
 
