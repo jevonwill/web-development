@@ -1,9 +1,17 @@
 {%extends "blog/base.html" %}
 {%block content %}
     {% for review in reviews %}
-        <h1>{{ review.title }}</h1>
-        <p>{{ review.name }}</p>
-        <p>{{ review.content }}</p>
-        <p>{{ review.rating }}</p>
+        <article class="media content-section">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ review.name }}</a>
+                <small class="text-muted">{{ review.rating }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ review.title }}</a></h2>
+            <p class="article-content">{{ review.content }}</p>
+            </div>
+        </article>
     {% endfor %}
 {% endblock content%}
+
+  
