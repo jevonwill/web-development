@@ -15,8 +15,14 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+         
+        {% for review in reviews %}
+            <h1>{{ review.title }}</h1>
+            <p>{{ review.name }}</p>
+            <p>{{ review.content }}</p>
+            <p>{{ review.rating }}</p>
 
-        <p>First Django App!!!</p>
+        {% endfor %}
         
         <script src="" async defer></script>
     </body>
