@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Review
 
 reviews = [
         {
@@ -18,7 +19,7 @@ reviews = [
 
 def home(request):
         context = {
-                'reviews': reviews
+                'reviews': Review.objects.all()
         }
         return render(request, 'blog/home.html', context)
 
