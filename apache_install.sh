@@ -9,3 +9,8 @@
 sudo apt update
 sudo apt install apache2 -y
 
+#Copy git repo to /var/www/
+sudo mkdir /var/www/$1
+sudo cp -r /root/$1 /var/www/
+
+
