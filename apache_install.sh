@@ -10,8 +10,12 @@ sudo apt update
 sudo apt install apache2 -y
 
 #Copy git repo to /var/www/
-sudo mkdir /var/www/$1
-sudo cp -r /root/$1 /var/www/
+if sudo mkdir /var/www/$1; then
+    sudo cp -r /root/$1 /var/www/
+else
+    sudo mkdir /var/www/$1
+    sudo cp -r /root/$1 /var/www/
+fi
 
 #Setting up the VirtualHost Configuration File
 #Should use awk or grep with ifconfig to get ServerName var
