@@ -1,5 +1,5 @@
 #!/bin/sh
-#Apache installation script, completely original with awk/grep regex expressions
+#Apache installation script, completely original with awk/grep regex expressions. Takes the git repo and server hostname/ip as args.
 # Authored by Jevon Williams
 # 4/23/2021 6:14PM
 
