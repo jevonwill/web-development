@@ -25,3 +25,18 @@ else
 	sudo npm install
 
 fi
+
+#Install Ruby and compile scss
+if apt install -y ruby-full; then
+	cd $rootdir/bootstrap
+	gem install bundler -y
+	bundle install -y
+	npm run dist
+else
+	sudo apt install ruby-full -y
+	cd $rootdir/bootstrap
+	gem install bundler -y
+	bundle install -y
+	npm run dist
+fi
+
